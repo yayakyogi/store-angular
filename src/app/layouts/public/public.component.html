@@ -1,0 +1,18 @@
+<div class="flex flex-col h-full">
+  <div class="nav">
+    <img src="assets/icons/logo.png" class="cursor-pointer" routerLink="/" />
+    <div class="wrapper flex items-center gap-2">
+      <app-ui-button title="Home" routerLink="/"></app-ui-button>
+      <app-ui-button title="Categories"></app-ui-button>
+      <app-ui-button title="Rewards"></app-ui-button>
+      <app-ui-button title="Sign Up"></app-ui-button>
+      <app-ui-button title="Sign In" type="flat"></app-ui-button>
+    </div>
+  </div>
+  <div class="content flex-1">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="text-center text-sm py-5 text-grey border-t-2 border-t-gray mt-7">
+    2024 Copyright all right reserved
+  </div>
+</div>
