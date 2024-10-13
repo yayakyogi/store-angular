@@ -31,15 +31,15 @@ jobs:
 
       # Step 3: Install dependencies using npm
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       # Step 4: Run Angular unit tests
       - name: Run tests
-        run: npm test -- --watch=false --no-progress
+        run: yarn test -- --watch=false --no-progress
 
       # Step 5: Build the Angular application
       - name: Build Angular app
-        run: npm run build -- --configuration=production
+        run: yarn build -- --configuration=production
 
       # Step 6: Upload production build as an artifact (optional, but useful for debugging)
       - name: Upload Build Artifact
