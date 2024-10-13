@@ -35,11 +35,11 @@ jobs:
 
       # Step 4: Run Angular unit tests
       - name: Run tests
-        run: yarn test -- --watch=false --no-progress
+        run: yarn test
 
       # Step 5: Build the Angular application
       - name: Build Angular app
-        run: yarn build -- --configuration=production
+        run: yarn build
 
       # Step 6: Upload production build as an artifact (optional, but useful for debugging)
       - name: Upload Build Artifact
