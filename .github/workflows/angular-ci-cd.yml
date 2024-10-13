@@ -35,7 +35,7 @@ jobs:
 
       # Step 4: Run Angular unit tests
       - name: Run tests
-        run: yarn test
+        run: yarn test --no-watch --no-progress --browsers=ChromeHeadless
 
       # Step 5: Build the Angular application
       - name: Build Angular app
