@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
 import { UiButton } from '../../shared/ui/ui-button/ui-button.component';
+import { MatDivider } from '@angular/material/divider';
 
 @Component({
   selector: 'app-detail-product',
   standalone: true,
-  imports: [BreadcrumbComponent, UiButton],
+  imports: [BreadcrumbComponent, UiButton, MatDivider],
   templateUrl: './detail-product.component.html',
   styleUrl: './detail-product.component.scss',
 })

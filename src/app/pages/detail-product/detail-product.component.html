@@ -1,24 +1,23 @@
 <app-breadcrumb></app-breadcrumb>
-<div class="mt-5 pe-52">
+<div class="mt-5">
   <!-- Image Preview -->
   <div class="grid grid-rows-12 grid-flow-col gap-3 max-h-[500px]">
-    @for (product of productImages; track $index; let idx = $index) { 
-      @if (idx=== 0) {
-        <div class="row-span-12 col-span-10">
-          <img
-            [src]="'assets/dummies/' + product"
-            class="rounded-lg w-full h-full object-fill"
-          />
-        </div>
-        } @else {
-        <div class="row-span-3 col-span-2">
-          <img
-            [src]="'assets/dummies/' + product"
-            class="rounded-lg w-full h-full object-cover"
-          />
-        </div>
-      } 
-    }
+    @for (product of productImages; track $index; let idx = $index) { @if
+    (idx=== 0) {
+    <div class="row-span-12 col-span-8">
+      <img
+        [src]="'assets/dummies/' + product"
+        class="rounded-lg w-full h-full object-fill"
+      />
+    </div>
+    } @else {
+    <div class="row-span-3 col-span-2">
+      <img
+        [src]="'assets/dummies/' + product"
+        class="rounded-lg w-full h-full object-cover"
+      />
+    </div>
+    } }
   </div>
 
   <!-- Description -->
@@ -26,58 +25,75 @@
     <div class="flex-1">
       <h3 class="text-3xl">Sofa Ternyaman</h3>
       <h5 class="text-grey mt-1 mb-2">By Yayak Yogi</h5>
-      <h4 class="text-2xl text-orange mb-4">$1,409</h4>
-      <div class="max-w-3xl">
+      <h4 class="text-2xl text-orange mb-3">$1,409</h4>
+      <div class="max-w-4xl">
         <p class="text-grey">
-          The Nike Air Max 720 SE goes bigger than ever before with Nike's tallest
-          Air unit yet for unimaginable, all-day comfort. There's super breathable
-          fabrics on the upper, while colours add a modern edge.
+          The Nike Air Max 720 SE goes bigger than ever before with Nike's
+          tallest Air unit yet for unimaginable, all-day comfort. There's super
+          breathable fabrics on the upper, while colours add a modern edge.
         </p>
-        <br/>
+        <br />
         <p class="text-grey">
           Bring the past into the future with the Nike Air Max 2090, a bold look
           inspired by the DNA of the iconic Air Max 90. Brand-new Nike Air
           cushioning underfoot adds unparalleled comfort while transparent mesh
-          and vibrantly coloured details on the upper are blended with timeless OG
-          features for an edgy, modernised look.
+          and vibrantly coloured details on the upper are blended with timeless
+          OG features for an edgy, modernised look.
         </p>
       </div>
     </div>
-    <div>
-      <app-ui-button title="Add To Cart" type="flat"></app-ui-button>
+    <div class="flex items-center gap-2">
+      <app-ui-button title="share" type="icon"></app-ui-button>
+      <app-ui-button title="favorite" type="icon"></app-ui-button>
+      <mat-divider></mat-divider>
+      <app-ui-button title="Add to Cart" type="flat"></app-ui-button>
     </div>
   </div>
 
   <!-- Customer Review -->
-   <div class="mt-8">
+  <div class="mt-8">
     <h2 class="text-2xl">Customer Review</h2>
     <div class="flex items-start gap-4 mt-4">
-      <img src="https://dummyjson.com/image/100" alt="dummy" class="rounded-full w-20 h-20" />
+      <img
+        src="https://dummyjson.com/image/100"
+        alt="dummy"
+        class="rounded-full w-20 h-20"
+      />
       <div class="max-w-2xl">
         <h4 class="text-lg mb-1">Hazza Rizky</h4>
         <p class="text-grey">
-          I thought it was not good for living room. I really happy
-          to decided buy this product last week now feels like homey.
+          I thought it was not good for living room. I really happy to decided
+          buy this product last week now feels like homey.
         </p>
       </div>
     </div>
     <div class="flex items-start gap-4 mt-4">
-      <img src="https://dummyjson.com/image/100" alt="dummy" class="rounded-full w-20 h-20" />
+      <img
+        src="https://dummyjson.com/image/100"
+        alt="dummy"
+        class="rounded-full w-20 h-20"
+      />
       <div class="max-w-2xl">
         <h4 class="text-lg mb-1">Anny Sukarata</h4>
         <p class="text-grey">
-          Color is great with the minimalist concept. Even I thought it was made by Cactus industry. I do really satisfied with this.
+          Color is great with the minimalist concept. Even I thought it was made
+          by Cactus industry. I do really satisfied with this.
         </p>
       </div>
     </div>
     <div class="flex items-start gap-4 mt-4">
-      <img src="https://dummyjson.com/image/100" alt="dummy" class="rounded-full w-20 h-20" />
+      <img
+        src="https://dummyjson.com/image/100"
+        alt="dummy"
+        class="rounded-full w-20 h-20"
+      />
       <div class="max-w-2xl">
         <h4 class="text-lg mb-1">Dakimu Wangi</h4>
         <p class="text-grey">
-          When I saw at first, it was really awesome to have with. Just let me know if there is another upcoming product like this.
+          When I saw at first, it was really awesome to have with. Just let me
+          know if there is another upcoming product like this.
         </p>
       </div>
     </div>
-   </div>
+  </div>
 </div>
