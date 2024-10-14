@@ -1,6 +1,6 @@
 <div [ngSwitch]="type">
   <button *ngSwitchCase="'basic'" mat-button class="button-custom">{{ title }}</button>
-  <button *ngSwitchCase="'flat'" mat-flat-button>{{ title }}</button>
+  <button *ngSwitchCase="'flat'" mat-flat-button class="w-full">{{ title }}</button>
   <button *ngSwitchCase="'stroked'" mat-stroked-button class="button-custom">{{ title }}</button>
   <button *ngSwitchCase="'icon'" mat-icon-button>
     <mat-icon class="">{{ title }}</mat-icon>

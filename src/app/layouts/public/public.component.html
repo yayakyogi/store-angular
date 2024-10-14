@@ -5,8 +5,10 @@
       <app-ui-button title="Home" routerLink="/"></app-ui-button>
       <app-ui-button title="Categories"></app-ui-button>
       <app-ui-button title="Rewards"></app-ui-button>
-      <app-ui-button title="Sign Up"></app-ui-button>
-      <app-ui-button title="Sign In" type="flat"></app-ui-button>
+      @if (url !== '/sign-in' && url !== '/sign-up') {
+        <app-ui-button title="Sign Up" routerLink="/sign-up"></app-ui-button>
+        <app-ui-button title="Sign In" type="flat" routerLink="/sign-in"></app-ui-button>
+      }
     </div>
   </div>
   <div class="content flex-1">
