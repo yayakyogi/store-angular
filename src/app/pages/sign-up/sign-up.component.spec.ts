@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignInPage } from './sign-in.component';
+import { SignUpPage } from './sign-up.component';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('SignInPage', () => {
-  let component: SignInPage;
-  let fixture: ComponentFixture<SignInPage>;
+describe('SignUpPage', () => {
+  let component: SignUpPage;
+  let fixture: ComponentFixture<SignUpPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignInPage, NoopAnimationsModule],
+      imports: [SignUpPage, NoopAnimationsModule],
       providers: [
         {
           provide: ActivatedRoute,
@@ -27,7 +27,7 @@ describe('SignInPage', () => {
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SignInPage);
+    fixture = TestBed.createComponent(SignUpPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

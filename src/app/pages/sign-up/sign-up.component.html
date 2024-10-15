@@ -1,0 +1,55 @@
+<div class="mt-5 flex flex-col items-center max-w-lg mx-auto">
+  <h1 class="text-4xl leading-tight mb-12 px-14">Memulai untuk jual beli dengan cara terbaru</h1>
+  <form class="w-3/4" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label class="label">Nama Lengkap</mat-label>
+      <input name="fullname" [(ngModel)]="formData.fullName" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label class="label">Email</mat-label>
+      <input name="email" [(ngModel)]="formData.email" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Password</mat-label>
+      <input name="password" [(ngModel)]="formData.password" matInput [type]="hide() ? 'password' : 'text'" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon class="text-lg">{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="flex flex-col mb-7 -mt-2">
+      <div>
+        <p class="text-body text-xs">Store Name</p>
+        <span class="text-grey text-xs">Apakah anda juga ingin membuka toko?</span>
+      </div>
+      <mat-radio-group name="withStore" [(ngModel)]="formData.withStore" aria-label="Select an option">
+        <mat-radio-button [value]="true">Iya, boleh</mat-radio-button>
+        <mat-radio-button [value]="false">Enggak, makasih</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    @if (formData.withStore) {
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label class="label">Nama Toko</mat-label>
+        <input name="storeName" [(ngModel)]="formData.storeName" matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Kategori Toko</mat-label>
+        <select name="storeCategory" [(ngModel)]="formData.storeCategory" matNativeControl>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    }
+    <div class="flex flex-col gap-3">
+      <app-ui-button title="Sign Up Now" type="flat"></app-ui-button>
+      <app-ui-button title="Back to Sig In" type="stroked" routerLink="/sign-in"></app-ui-button>
+    </div>
+  </form>
+</div>
