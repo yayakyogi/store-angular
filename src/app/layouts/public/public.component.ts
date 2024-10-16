@@ -8,11 +8,12 @@ import {
 } from '@angular/router';
 import { UiButton } from '../../shared/ui/ui-button/ui-button.component';
 import { filter } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-public',
   standalone: true,
-  imports: [RouterOutlet, UiButton, RouterLink],
+  imports: [RouterOutlet, UiButton, RouterLink, CommonModule],
   templateUrl: './public.component.html',
   styleUrl: './public.component.scss',
 })

@@ -1,5 +1,5 @@
 <div class="flex flex-col h-full">
-  <div class="nav">
+  <div [ngClass]="url === '/success-sign-up' ? 'hidden' : 'nav'">
     <img src="assets/icons/logo.png" class="cursor-pointer" routerLink="/" />
     <div class="wrapper flex items-center gap-2">
       <app-ui-button title="Home" routerLink="/"></app-ui-button>
