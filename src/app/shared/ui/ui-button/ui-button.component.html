@@ -2,15 +2,19 @@
   <button *ngSwitchCase="'basic'" mat-button class="button-custom">{{ title }}</button>
   <button 
     *ngSwitchCase="'flat'" 
-    mat-flat-button 
-    [ngClass]="{'w-full': true, 'button-secondary': isSecondary}"
+    mat-flat-button
+    class="w-full"
   >
     {{ title }}
   </button>
   <button 
     *ngSwitchCase="'stroked'" 
     mat-stroked-button 
-    [ngClass]="{'button-custom': true, 'button-secondary': isSecondary}"
+    [ngClass]="{
+      'button-custom': true, 
+      'button-secondary': isSecondary,
+      'button-danger': isDanger,
+    }"
   >
     {{ title }}
   </button>

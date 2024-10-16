@@ -19,13 +19,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   
   .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label{
-    top: 10px;
+    top: 8px;
     left: 0;
   }
 
   .mdc-notched-outline {
     height: 50px;
     padding-top: 7px;
+    font-size: 20px;
   }
 
   input {

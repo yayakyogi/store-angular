@@ -1,0 +1,105 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="mt-7">
+  <div class="grid grid-cols-12 mb-3">
+    <div class="col-span-3">
+      <h3>Image</h3>
+    </div>
+    <div class="col-span-4">
+      <h3>Name & Seller</h3>
+    </div>
+    <div class="col-span-3">
+      <h3>Price</h3>
+    </div>
+    <div class="col-span-1">
+      <h3>Menu</h3>
+    </div>
+  </div>
+  <div class="grid grid-cols-12">
+    <div class="col-span-3">
+      <img src="assets/dummies/pic-1.jpg" class="w-40 rounded-md" />
+    </div>
+    <div class="col-span-4 flex flex-col justify-center">
+      <h5 class="text-lg truncate">Sofa Ternyaman</h5>
+      <p class="text-grey">by Andi Suka</p>
+    </div>
+    <div class="col-span-3 flex flex-col justify-center">
+      <h5 class="text-lg truncate">$2390</h5>
+      <p class="text-grey">USD</p>
+    </div>
+    <div class="col-span-1 flex flex-col justify-center">
+      <app-ui-button type="stroked" [isDanger]="true" title="Remove"></app-ui-button>
+    </div>
+  </div>
+  
+  <div class="h-0.5 w-full bg-gray my-5"></div>
+
+  <h3 class="mb-8 text-lg font-medium">Shipping Details</h3>
+  <form class="grid grid-cols-12 gap-3">
+    <div class="col-span-6">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Address 1</mat-label>
+        <input name="address1" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-6">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Address 2</mat-label>
+        <input name="address2" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-4">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Province</mat-label>
+        <input name="province" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-4">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>City</mat-label>
+        <input name="city" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-4">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Postal Code</mat-label>
+        <input name="postcode" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-6">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Country</mat-label>
+        <input name="country" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-span-6">
+      <mat-form-field appearance="outline" floatLabel="always">
+        <mat-label>Mobile</mat-label>
+        <input name="mobile" matInput>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <h3 class="mb-5 text-lg font-medium">Payment Information</h3>
+  <div class="w-full flex justify-between items-center gap-5">
+    <div>
+      <h5 class="text-2xl mb-1">$10</h5>
+      <p class="text-grey">Country Tax</p>
+    </div>
+    <div>
+      <h5 class="text-2xl mb-1">$210</h5>
+      <p class="text-grey">Product Insurance</p>
+    </div>
+    <div>
+      <h5 class="text-2xl mb-1">$570</h5>
+      <p class="text-grey">Ship to Jakarta</p>
+    </div>
+    <div>
+      <h5 class="text-2xl mb-1 text-primary">$570</h5>
+      <p class="text-grey">Total</p>
+    </div>
+    <div>
+      <app-ui-button type="flat" title="Checkout Now"></app-ui-button>
+    </div>
+  </div>
+</div>

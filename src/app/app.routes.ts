@@ -5,6 +5,8 @@ import { DetailProductPage } from './pages/detail-product/detail-product.compone
 import { SignInPage } from './pages/sign-in/sign-in.component';
 import { SignUpPage } from './pages/sign-up/sign-up.component';
 import { SuccessSignUpPage } from './pages/success-sign-up/success-sign-up.component';
+import { CartPage } from './pages/carts/carts.component';
+import { SuccessTransactionPage } from './pages/success-transaction/success-transaction.component';
 
 export const routes: Routes = [
   {
@@ -22,8 +24,16 @@ export const routes: Routes = [
         component: SignUpPage,
       },
       {
+        path: 'carts',
+        component: CartPage,
+      },
+      {
         path: 'success-sign-up',
         component: SuccessSignUpPage,
+      },
+      {
+        path: 'success-transaction',
+        component: SuccessTransactionPage,
       },
       {
         path: ':id',
