@@ -13,4 +13,6 @@ import { MatIcon } from '@angular/material/icon';
 export class UiButton {
   @Input() title!: string;
   @Input() type?: 'basic' | 'flat' | 'stroked' | 'icon' = 'basic';
+  @Input() isSecondary?: boolean = false;
+  @Input() isDanger?: boolean = false;
 }

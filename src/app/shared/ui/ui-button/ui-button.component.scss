@@ -7,3 +7,14 @@
 ::ng-deep .mat-mdc-button, .mat-mdc-unelevated-button, .mat-mdc-outlined-button {
   border-radius: 6px !important;
 }
+
+.button-secondary {
+  border: none !important;
+  background-color: #F3F3F3 !important;
+  color: #BBBBBB !important;
+}
+
+.button-danger {
+  background-color: #FC5E84 !important;
+  color: #FFFFFF !important;
+}
