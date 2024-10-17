@@ -1,0 +1,32 @@
+<div class="w-full h-full flex items-start bg-[#F5F5FB]">
+  <div class="w-72 flex flex-col h-full bg-white sticky top-0">
+    <div class="flex justify-center items-center h-36">
+      <img src="assets/icons/logo.png" class="w-14" />
+    </div>
+    <div class="flex-1 flex flex-col gap-1">
+      @for (item of menu; track $index) {
+        <div [ngClass]="{'menu': true, 'active-menu': url === item.url}">{{ item.label }}</div>
+      }
+    </div>
+    <div class="pb-4">
+      <div class="menu">Logout</div>
+    </div>
+  </div>
+  <div class="w-full h-full px-8 py-4">
+    <div class="flex justify-between items-start">
+      <div>
+        <h1 class="text-3xl font-medium mb-1">Dashboard</h1>
+        <p class="text-grey">Look what you have made today!</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="assets/dummies/profile-picture.png" class="w-12 h-12 rounded-full" />
+        <p>Hi, Angga</p>
+        <app-ui-button title="shopping_basket" type="icon"></app-ui-button>
+        <!-- shopping_basket -->
+      </div>
+    </div>
+    <div class="mt-5">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
