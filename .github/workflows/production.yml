@@ -1,4 +1,4 @@
-name: Vercel Preview Deployment
+name: Vercel Production Deployment
 env:
   VERCEL_ORD_ID: YeOgjGVrKz3ISB4YdZLdoCm7
   VERCEL_PROJECT_ID: team_wkrzFcsWkoHo89Qh5qsgYjdY
@@ -10,20 +10,32 @@ on:
 
 jobs:
   Deploy-Production:
-    
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18.x]  # Use Node.js version 18.x
+
     steps:
-      -uses: actions/checkout@v2
+      # Step 1: Check out the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      -name: Install Vercel CLI
-      run: yarn install --global vercel@latest
+      # Step 2: Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-      -name: Pull Vercel Environtment Information
-      run: vercel pull --yes --environment=production--token=rx5Jcg0LzWHIrrCBvqprUW6E
+      - name: Install Vercel CLI
+        run: yarn install --global vercel@latest
 
-      -name: Build Project Artifacts
-      run: vercel build --prod --token=rx5Jcg0LzWHIrrCBvqprUW6E
+      - name: Pull Vercel Environtment Information
+        run: vercel pull --yes --environment=production--token=rx5Jcg0LzWHIrrCBvqprUW6E
 
-      -name: Deploy Project Artifacts to Vercel
-      run: vercel deploy --prebuilt --prod --token=rx5Jcg0LzWHIrrCBvqprUW6E
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=rx5Jcg0LzWHIrrCBvqprUW6E
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=rx5Jcg0LzWHIrrCBvqprUW6E
+      
