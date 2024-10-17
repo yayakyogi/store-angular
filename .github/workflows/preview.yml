@@ -28,7 +28,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Vercel CLI
-        run: yarn install --global vercel@latest
+        run: yarn global add vercel@latest
 
       - name: Pull Vercel Environtment Information
         run: vercel pull --yes --environment=production--token=rx5Jcg0LzWHIrrCBvqprUW6E
