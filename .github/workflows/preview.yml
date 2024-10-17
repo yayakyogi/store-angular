@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]  # Use Node.js version 18.x
+        node-version: [18.x]  # Use Node.js version 18.x,
 
     steps:
       # Step 1: Check out the code from the repository
