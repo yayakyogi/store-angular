@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CartPage } from './carts.component';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CartPage', () => {
   let component: CartPage;
@@ -10,7 +11,7 @@ describe('CartPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CartPage],
+      imports: [CartPage, BrowserAnimationsModule],
       providers: [
         {
           provide: ActivatedRoute,

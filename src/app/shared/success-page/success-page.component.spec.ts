@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SuccessPageComponent } from './success-page.component';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SuccessPageComponent', () => {
   let component: SuccessPageComponent;
@@ -10,7 +11,7 @@ describe('SuccessPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SuccessPageComponent],
+      imports: [SuccessPageComponent, BrowserAnimationsModule],
       providers: [
         {
           provide: ActivatedRoute,
